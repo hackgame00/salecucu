@@ -3,304 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaleCuCu POS - Phần Mềm Quản Lý Bán Hàng Chuyên Nghiệp</title>
+    <title>SaleCuCu POS - Giải pháp quản lý bán hàng toàn diện</title>
+    <meta name="description" content="Khám phá chi tiết các tính năng ưu việt của hệ thống SaleCuCu POS: Quản lý kho, hóa đơn, công nợ, quyết toán và hệ thống DRS.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!-- Background glowing orbs -->
+    <div class="bg-orbs">
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+    </div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>SaleCuCu POS</h1>
-            <p class="subtitle">Giải pháp Quản lý Bán hàng Toàn diện cho Cửa hàng của bạn</p>
-            <p>Tối ưu hóa quy trình, quản lý sản phẩm, theo dõi hạn sử dụng và tăng trưởng doanh thu một cách hiệu quả.</p>
-            <div class="hero-buttons">
-                <a href="#download" class="cta-button primary">Tải Bản Dùng Thử</a>
-                <a href="#activation" class="cta-button secondary">Xem Hướng Dẫn Kích Hoạt</a>
+    <nav class="navbar glassmorphism">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="picture/logo.png" alt="Logo" class="nav-logo">
+                SaleCuCu <span>POS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#invoices">Hóa Đơn</a></li>
+                <li><a href="#inventory">Kho & Sản Phẩm</a></li>
+                <li><a href="#analytics">Báo Cáo</a></li>
+                <li><a href="#tools">Tiện Ích</a></li>
+                <li><a href="https://app.mediafire.com/folder/u0641z474476f" target="_blank" class="btn-primary">Tải về ngay</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text reveal-left">
+                <h1>Hệ Sinh Thái Bán Hàng <br><span class="text-gradient">Toàn Diện</span></h1>
+                <p>Khám phá mọi tính năng quyền lực nhất của SaleCuCu POS - Từ quản lý hóa đơn, kiểm soát kho bãi cho đến dự báo trí tuệ nhân tạo.</p>
+                <div class="hero-buttons">
+                    <a href="#invoices" class="btn-primary">Khám phá tính năng</a>
+                    <a href="https://app.mediafire.com/folder/u0641z474476f" target="_blank" class="btn-secondary">Tải phần mềm về máy</a>
+                </div>
+            </div>
+            <div class="hero-image glassmorphism reveal-right">
+                <img src="picture/1.png Ảnh lớn ở trang chủ (Hero Image).png" alt="SaleCuCu POS Dashboard">
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="features" class="container">
-            <h2>Tại Sao Chọn SaleCuCu POS?</h2>
-            <div class="features-grid">
-				<div class="feature-card">
-					<i class="fas fa-globe"></i>
-					<h3>Hỗ trợ Đa Ngôn ngữ</h3>
-					<p>Phá vỡ rào cản ngôn ngữ. SaleCuCu POS được thiết kế để hoạt động với giao diện <strong>Tiếng Việt</strong> và <strong>Tiếng Hungary</strong>, giúp nhân viên của bạn ở nhiều quốc gia khác nhau có thể sử dụng một cách dễ dàng và tự nhiên.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-network-wired"></i>
-					<h3>Hoạt động Mạng LAN & Đa người dùng</h3>
-					<p>Triển khai mô hình máy chủ - máy trạm mạnh mẽ. Một máy tính chính sẽ làm máy chủ chứa toàn bộ dữ liệu, các máy tính khác trong cùng mạng LAN có thể kết nối vào để bán hàng, giúp đồng bộ dữ liệu thời gian thực và quản lý tập trung.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-edit"></i>
-					<h3>Quản lý Sản phẩm Hiệu quả</h3>
-					<p>Tiết kiệm tối đa thời gian nhập liệu. Dễ dàng <strong>sao chép</strong> thông tin từ một sản phẩm có sẵn để tạo nhanh sản phẩm mới. Đặc biệt, bạn có thể cập nhật <strong>tên và giá hàng loạt</strong> cho nhiều sản phẩm cùng lúc.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-bell"></i>
-					<h3>Quản lý Hạn sử dụng Thông minh</h3>
-					<p>Chủ động kiểm soát hàng tồn kho với hệ thống cảnh báo HSD tự động. Nhận báo cáo chi tiết và thông báo qua email về các sản phẩm sắp hết hạn, giúp bạn lên kế hoạch khuyến mãi kịp thời, tối thiểu hóa tổn thất.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-tags"></i>
-					<h3>In Tem Giá Kệ Tùy Chỉnh</h3>
-					<p>Tự thiết kế tem giá kệ chuyên nghiệp với đầy đủ thông tin: tên, giá, mã sản phẩm và đơn giá (ví dụ: giá/kg). In trực tiếp từ phần mềm giúp cửa hàng của bạn luôn đồng bộ và chuyên nghiệp.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-file-excel"></i>
-					<h3>Nhập/Xuất Dữ Liệu Linh Hoạt</h3>
-					<p>Dễ dàng nhập danh sách hàng nghìn sản phẩm từ file Excel/CSV hoặc xuất dữ liệu để phân tích. Tiết kiệm hàng giờ làm việc khi thiết lập cửa hàng hoặc di chuyển dữ liệu.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-database"></i>
-					<h3>Sao Lưu & Khôi Phục An Toàn</h3>
-					<p>Bảo vệ dữ liệu kinh doanh quan trọng của bạn với chức năng sao lưu và khôi phục chỉ bằng một cú nhấp chuột. Dễ dàng tạo các bản sao lưu và khôi phục lại khi cần thiết, giúp bạn yên tâm kinh doanh.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-cash-register"></i>
-					<h3>Bán Hàng Đa Phiên & Nhanh Chóng</h3>
-					<p>Giao diện bán hàng theo tab cho phép xử lý đồng thời nhiều đơn hàng của nhiều khách khác nhau mà không bị gián đoạn. Thao tác quét mã vạch, thêm sản phẩm, tính tiền thối lại được tối ưu hóa cho tốc độ nhanh nhất.</p>
-				</div>
-				<div class="feature-card">
-					<i class="fas fa-chart-line"></i>
-					<h3>Báo Cáo & Quyết Toán Cuối Ngày</h3>
-					<p>Theo dõi nhật ký giao dịch và doanh thu hàng ngày. Chức năng quyết toán cuối ngày giúp bạn tổng kết, rút tiền và tạo phiên làm việc mới với số dư còn lại một cách chính xác và minh bạch.</p>
-				</div>
-			</div>
-        </section>
-		
-		<section id="drs-feature" class="container">
-			<h2>Tính năng DRS Độc Quyền: Tự động & Chính xác</h2>
-			<p class="section-subtitle">Loại bỏ hoàn toàn sai sót và tiết kiệm thời gian với hệ thống xử lý phí thu hồi vỏ chai/lon (DRS) thông minh duy nhất trên thị trường.</p>
-			
-			<div class="drs-content-wrapper">
-				<div class="drs-explanation">
-					<h3>Vấn đề thường gặp?</h3>
-					<p>Việc tính phí DRS thủ công thường gây ra nhầm lẫn, quên tính phí, hoặc mất thời gian của nhân viên, dẫn đến sai lệch trong doanh thu và kiểm kê.</p>
-					
-					<h3>Giải pháp của SaleCuCu POS:</h3>
-					<ul>
-						<li>
-							<i class="fas fa-cogs"></i>
-							<div>
-								<strong>Thiết lập đơn giản:</strong>
-								<p>Bạn chỉ cần đặt tên sản phẩm có chứa chữ "DRS" (ví dụ: "Coca Cola 0.5L DRS"). Mọi thứ còn lại sẽ được tự động hóa.</p>
-							</div>
-						</li>
-						<li>
-							<i class="fas fa-magic"></i>
-							<div>
-								<strong>Tự động 100%:</strong>
-								<p>Khi bán một sản phẩm có nhãn DRS, một dòng phí DRS sẽ tự động được thêm vào hóa đơn mà không cần bất kỳ thao tác thủ công nào.</p>
-							</div>
-						</li>
-						<li>
-							<i class="fas fa-sync-alt"></i>
-							<div>
-								<strong>Luôn đồng bộ:</strong>
-								<p>Số lượng phí DRS luôn tự động khớp với số lượng sản phẩm chính, kể cả khi bạn tăng hoặc giảm số lượng trong giỏ hàng.</p>
-							</div>
-						</li>
-						<li>
-							<i class="fas fa-file-invoice-dollar"></i>
-							<div>
-								<strong>Minh bạch tuyệt đối:</strong>
-								<p>Phí DRS được hiển thị thành một dòng riêng biệt, rõ ràng trên hóa đơn, giúp khách hàng dễ hiểu và tin tưởng vào sự chuyên nghiệp của cửa hàng.</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-				
-				<div class="receipt-mockup">
-					<h4>SZUPER DISZKONT</h4>
-					<div class="receipt-item">
-						<span class="item-name">Sör Soproni 0.5L DRS</span>
-						<span class="item-qty">x 2</span>
-						<span class="item-price">700 Ft</span>
-					</div>
-					<div class="receipt-item drs-item">
-						<span class="item-name">***DRS***</span>
-						<span class="item-qty">x 2</span>
-						<span class="item-price">100 Ft</span>
-					</div>
-					<div class="receipt-total">
-						<span>ÖSSZESEN:</span>
-						<span>800 Ft</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
-        <section id="screenshots" class="container">
-            <h2>Giao Diện Trực Quan</h2>
-            <div class="screenshots-grid">
-				<img src="images/giao-dien-ban-hang.png" alt="Giao diện bán hàng SaleCuCu POS">
-				<img src="images/bao-cao-hsd.png" alt="Báo cáo hạn sử dụng chi tiết">
-				<img src="images/quan-ly-san-pham.png" alt="Cửa sổ quản lý sản phẩm">
-				<img src="images/themsanpham.png" alt="them san pham">
-				<img src="images/suahangloat.png" alt="sua hang loat">
-			</div>
-        </section>
-
-        <section id="activation" class="container">
-			<h2>Quy Trình Mua và Kích Hoạt Bản Quyền</h2>
-			<p>Sở hữu phần mềm vĩnh viễn chỉ với 30.000 Forint một lần thanh toán duy nhất cho mỗi máy tính.</p>
-			
-			<div class="activation-steps">
-				<div class="step">
-					<div class="step-number">1</div>
-					<h3>Tải và Cài Đặt</h3>
-					<p>Tải xuống bản dùng thử miễn phí và cài đặt trên máy tính Windows của bạn. Bạn sẽ có 7 ngày trải nghiệm đầy đủ tính năng.</p>
-				</div>
-				<div class="step">
-					<div class="step-number">2</div>
-					<h3>Lấy Mã Máy (Machine ID)</h3>
-					<p>Khi lần đầu mở chương trình, một cửa sổ sẽ hiện ra cung cấp "Mã máy". Đây là mã số duy nhất của máy tính, không chứa thông tin cá nhân.</p>
-				</div>
-				<div class="step">
-					<div class="step-number">3</div>
-					<h3>Gửi Mã và Thanh Toán</h3>
-					<p>Sao chép và gửi "Mã máy" cho chúng tôi qua Email hoặc Viber/Whatsapp để nhận hướng dẫn thanh toán.</p>
-				</div>
-				<div class="step">
-					<div class="step-number">4</div>
-					<h3>Nhận và Kích Hoạt</h3>
-					<p>Sau khi thanh toán, bạn sẽ nhận được "Khóa kích hoạt". Nhập khóa này vào chương trình để mở khóa và sử dụng vĩnh viễn.</p>
-				</div>
-			</div>
-			
-			<div class="license-model">
-				<h4>Mô hình bản quyền minh bạch</h4>
-				<p>✔️ <strong>Mua một lần, dùng trọn đời:</strong> Không phí duy trì hàng tháng, không chi phí ẩn.</p>
-				<p>✔️ <strong>Bản quyền theo máy:</strong> Mỗi khóa bản quyền dành riêng cho một máy tính, đảm bảo tính ổn định và bảo mật.</p>
-				<p>✔️ <strong>Hỗ trợ cập nhật:</strong> Nhận các bản cập nhật và tính năng mới trong tương lai.</p>
-			</div>
-
-			<a href="#contact" class="cta-button primary large">Liên Hệ Mua Bản Quyền Ngay</a>
-		</section>
-		
-		<section id="faq" class="container">
-			<h2>Câu Hỏi Thường Gặp (FAQ)</h2>
-			<div class="faq-container">
-				<div class="faq-item">
-					<button class="faq-question">
-						<span>Phần mềm này yêu cầu cấu hình máy tính như thế nào?</span>
-						<i class="fas fa-chevron-down"></i>
-					</button>
-					<div class="faq-answer">
-						<p>SaleCuCu POS được thiết kế để hoạt động nhẹ nhàng trên máy tính chạy hệ điều hành Windows (Windows 10, 11). Chương trình không yêu cầu cấu hình phần cứng cao.</p>
-					</div>
-				</div>
-
-				<div class="faq-item">
-					<button class="faq-question">
-						<span>Đây là phí trả một lần hay phải trả hàng tháng?</span>
-						<i class="fas fa-chevron-down"></i>
-					</button>
-					<div class="faq-answer">
-						<p>Đây là phí thanh toán <strong>một lần duy nhất</strong>. Bạn mua một lần và sở hữu bản quyền phần mềm vĩnh viễn cho một máy tính, không có bất kỳ chi phí duy trì hàng tháng hay hàng năm nào khác.</p>
-					</div>
-				</div>
-
-				<div class="faq-item">
-					<button class="faq-question">
-						<span>Nếu tôi đổi hoặc cài lại máy tính, tôi có dùng lại được bản quyền không?</span>
-						<i class="fas fa-chevron-down"></i>
-					</button>
-					<div class="faq-answer">
-						<p>Bản quyền được cấp theo "Mã máy" (Machine ID) duy nhất của mỗi máy tính. Do đó, nếu bạn thay đổi máy tính hoặc cài đặt lại Windows dẫn đến thay đổi Mã máy, bạn sẽ cần liên hệ để mua một khóa bản quyền mới. Chúng tôi có chính sách hỗ trợ giá tốt cho khách hàng cũ mua lại bản quyền.</p>
-					</div>
-				</div>
-
-				<div class="faq-item">
-					<button class="faq-question">
-						<span>Dữ liệu bán hàng của tôi có được an toàn không?</span>
-						<i class="fas fa-chevron-down"></i>
-					</button>
-					<div class="faq-answer">
-						<p>Rất an toàn. Toàn bộ dữ liệu sản phẩm và bán hàng của bạn được lưu trữ trực tiếp trên máy tính của chính bạn, không ai khác có thể truy cập được. Ngoài ra, chương trình còn có chức năng "Sao lưu & Khôi phục" để bạn tự tạo các bản sao lưu dữ liệu một cách an toàn.</p>
-					</div>
-				</div>
-				
-				<div class="faq-item">
-					<button class="faq-question">
-						<span>Tôi có nhận được hỗ trợ nếu gặp vấn đề không?</span>
-						<i class="fas fa-chevron-down"></i>
-					</button>
-					<div class="faq-answer">
-						<p>Chắc chắn có. Chúng tôi hỗ trợ kỹ thuật cho tất cả khách hàng đã mua bản quyền. Bạn có thể liên hệ trực tiếp qua Email hoặc Viber/Whatsapp được cung cấp ở cuối trang web.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-        
-        <section id="download" class="container download-section">
-            <h2>Bắt Đầu Ngay Hôm Nay</h2>
-            <p>Tải xuống SaleCuCu POS và trải nghiệm 7 ngày dùng thử đầy đủ tính năng.</p>
-            <a href="https://www.mediafire.com/folder/bxi1522l2io6b/SaleCuCu" class="cta-button primary massive"><i class="fas fa-download"></i> Tải Xuống cho Windows</a>
-        </section>
-
-    </main>
-
-    <footer id="contact">
+    <section id="invoices" class="highlights-section">
         <div class="container">
-            <h3>Thông tin liên hệ</h3>
-            <p><strong>Tác giả:</strong> VN QUANG BINH GROUP</p>
-            <p><strong>Email:</strong> hackgame00@gmail.com | <strong>Tin Nhắn Viber/Whatsapp:</strong> +36 30 296 3631</p>
-            <p class="copyright">&copy; 2024-2025 SaleCuCu POS. Mọi quyền được bảo lưu.</p>
+            <div class="section-title text-center reveal">
+                <h2>Hệ Thống Quản Lý Hóa Đơn <span class="text-gradient">Tối Ưu</span></h2>
+                <p>Kiểm soát dòng tiền, xuất nhập hàng hóa một cách minh bạch và chặt chẽ</p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card glassmorphism reveal">
+                    <div class="icon"><i class='bx bx-file'></i></div>
+                    <h3>Hóa Đơn Đến & Đi</h3>
+                    <p>Cái nhìn tổng quan về luồng hàng hóa mua vào và bán ra của cửa hàng.</p>
+                    <img src="picture/15 chuc nang hoa don den va hoa don di.png" alt="Chức năng hóa đơn">
+                </div>
+                <div class="highlight-card glassmorphism reveal">
+                    <div class="icon"><i class='bx bx-export'></i></div>
+                    <h3>Dữ Liệu Hóa Đơn Đi</h3>
+                    <p>Tra cứu và quản lý chi tiết lịch sử bán hàng, khách hàng từ hóa đơn xuất.</p>
+                    <img src="picture/16 du lieu hoa don di.png" alt="Hóa đơn đi">
+                </div>
+                <div class="highlight-card glassmorphism reveal">
+                    <div class="icon"><i class='bx bx-import'></i></div>
+                    <h3>Dữ Liệu Hóa Đơn Đến</h3>
+                    <p>Kiểm soát chặt chẽ hàng nhập kho, đối soát chi phí với nhà cung cấp.</p>
+                    <img src="picture/17 du lieu hoa don den.png" alt="Hóa đơn đến">
+                </div>
+                <div class="highlight-card glassmorphism reveal">
+                    <div class="icon"><i class='bx bx-cloud-upload'></i></div>
+                    <h3>Hóa Đơn Online & DRS</h3>
+                    <p>Tích hợp hóa đơn điện tử online và hệ thống hoàn cọc chai lọ tái chế (DRS).</p>
+                    <img src="picture/14 chuc nang hoa don online.png" alt="Hóa đơn online">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inventory" class="detailed-features">
+        <div class="container">
+            <div class="section-title text-center reveal">
+                <h2>Quản Lý Sản Phẩm & Kho Hàng <span class="text-gradient">Chuyên Sâu</span></h2>
+                <p>Công cụ quản trị hàng hóa thiết kế thông minh, tối ưu tốc độ làm việc</p>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-text reveal-left">
+                    <div class="feature-tag">Sản Phẩm</div>
+                    <h3>Thêm Sửa & Quản Lý Danh Sách</h3>
+                    <p>Giao diện trực quan giúp bạn tạo mới, chỉnh sửa thông tin sản phẩm cực kỳ dễ dàng. Hệ thống hiển thị dưới dạng danh sách lưới thông minh giúp thu ngân bao quát toàn bộ kho hàng.</p>
+                    <img src="picture/2. them sua san pham.png" alt="Thêm sửa sản phẩm" class="inline-img">
+                </div>
+                <div class="feature-img glassmorphism reveal-right">
+                    <img src="picture/3 danh sach san pham.png" alt="Danh sách sản phẩm">
+                    <h4 class="text-center mt-3 mb-2">Danh Sách Sản Phẩm</h4>
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="feature-text reveal-right">
+                    <div class="feature-tag">Truy Xuất</div>
+                    <h3>Tìm Kiếm & Lịch Sử Chỉnh Sửa</h3>
+                    <p>Truy xuất thông tin sản phẩm trong tích tắc nhờ bộ lọc tìm kiếm nâng cao. Đặc biệt, phần mềm theo dõi toàn bộ lịch sử thay đổi của từng mặt hàng giúp chống thất thoát dữ liệu.</p>
+                    <img src="picture/5 tim kiem san pham.png" alt="Tìm kiếm sản phẩm" class="inline-img">
+                </div>
+                <div class="feature-img glassmorphism reveal-left">
+                    <img src="picture/4 lich su chinh sua san pham.png" alt="Lịch sử chỉnh sửa">
+                    <h4 class="text-center mt-3 mb-2">Lịch Sử Thay Đổi Sản Phẩm</h4>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-text reveal-left">
+                    <div class="feature-tag">Hàng Loạt</div>
+                    <h3>Sửa Hàng Loạt & Cảnh Báo HSD</h3>
+                    <p>Đổi giá, thay đổi tên cho hàng trăm sản phẩm cùng lúc chỉ với vài cú click. Bên cạnh đó, hệ thống tự động lọc và gửi cảnh báo những mặt hàng cận Date để bạn có kế hoạch thanh lý kịp thời.</p>
+                    <img src="picture/7 canh bao san pham het han .png" alt="Cảnh báo hết hạn" class="inline-img">
+                </div>
+                <div class="feature-img glassmorphism reveal-right">
+                    <img src="picture/6 sua gia ten san pham hang loat.png" alt="Sửa hàng loạt">
+                    <h4 class="text-center mt-3 mb-2">Sửa Giá & Tên Hàng Loạt</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analytics" class="detailed-features bg-light">
+        <div class="container">
+            <div class="section-title text-center reveal">
+                <h2>Phân Tích Kinh Doanh & <span class="text-gradient">Trí Tuệ Nhân Tạo</span></h2>
+                <p>Để con số nói lên hiệu quả và định hướng tương lai</p>
+            </div>
+            <div class="analytics-grid">
+                <div class="feature-img glassmorphism text-center reveal-left">
+                    <img src="picture/10 phan tich hieu suat kinh doanh.png" alt="Phân tích hiệu suất">
+                    <h4 class="mt-3 mb-3">Phân Tích Hiệu Suất Bán Hàng</h4>
+                </div>
+                <div class="feature-img glassmorphism text-center reveal-right">
+                    <img src="picture/11 goi y nhap hang cho thang sau.png" alt="Gợi ý nhập hàng">
+                    <h4 class="mt-3 mb-3">AI Gợi Ý Nhập Hàng Thông Minh</h4>
+                </div>
+            </div>
+            <div class="text-center mt-4 reveal">
+                <p style="font-size: 18px; color: var(--text-light); max-width: 900px; margin: 0 auto;">
+                    SaleCuCu POS vượt xa các phần mềm thông thường bằng khả năng phân tích biểu đồ doanh thu nâng cao. Dựa vào lịch sử bán hàng, hệ thống đưa ra <b style="color:var(--primary-color)">gợi ý nhập hàng tự động cho tháng sau</b> giúp tối ưu nguồn vốn và không lo thiếu hụt hàng hóa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="section-title text-center text-white reveal">
+                <h2>Hệ Sinh Thái <span class="text-gradient">Tiện Ích Đa Dạng</span></h2>
+                <p>Kiểm soát toàn diện mọi khía cạnh của cửa hàng</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card glassmorphism reveal">
+                    <img src="picture/12 quan ly va so sanh gia cac nha cung cap.png" alt="Nhà cung cấp">
+                    <div class="tool-content">
+                        <h4>Quản Lý Nhà Cung Cấp</h4>
+                        <p>Lưu trữ bảng giá và so sánh chi phí từ nhiều nhà cung cấp khác nhau để có giá nhập tốt nhất.</p>
+                    </div>
+                </div>
+                <div class="tool-card glassmorphism reveal">
+                    <img src="picture/13 ket noi di dong.png" alt="Kết nối di động">
+                    <div class="tool-content">
+                        <h4>Kết Nối Di Động Mobile</h4>
+                        <p>Đồng bộ dữ liệu thời gian thực, cho phép bạn theo dõi hoạt động kinh doanh từ xa qua điện thoại.</p>
+                    </div>
+                </div>
+                <div class="tool-card glassmorphism reveal">
+                    <img src="picture/8 cai dat.png" alt="Cài đặt">
+                    <div class="tool-content">
+                        <h4>Cài Đặt Hệ Thống</h4>
+                        <p>Tinh chỉnh mọi thông số của phần mềm, quản lý phân quyền và cấu hình máy in/máy quét mã vạch.</p>
+                    </div>
+                </div>
+                <div class="tool-card glassmorphism reveal">
+                    <img src="picture/9 cac chuc nang tien ich.png" alt="Tiện ích">
+                    <div class="tool-content">
+                        <h4>Công Cụ Bổ Trợ Khác</h4>
+                        <p>Hỗ trợ in tem nhãn dán kệ, ghi chú nhanh, sao lưu dữ liệu và vô số tiện ích mở rộng khác.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer reveal">
+        <div class="container text-center">
+            <div class="logo justify-center">
+                <img src="picture/logo.png" alt="Logo" class="nav-logo">
+                SaleCuCu <span>POS</span>
+            </div>
+            <p>Giải pháp tối thượng cho quản lý bán lẻ và kho bãi.</p>
+            <p class="copyright">&copy; 2026 SaleCuCu. All rights reserved.</p>
         </div>
     </footer>
 
-    <div id="lightbox" class="lightbox">
-        <span class="close-button">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+    <!-- Lightbox Modal -->
+    <div id="lightbox" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(5px);">
+        <img id="lightbox-img" src="" style="max-width:95%; max-height:95%; border-radius:12px; box-shadow:0 0 50px rgba(0,242,254,0.3); object-fit:contain; border:1px solid rgba(255,255,255,0.1);">
     </div>
-
+    
     <script>
-        // MÃ JAVASCRIPT CHO PHẦN FAQ
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                if (!isActive) {
-                    item.classList.add('active');
+        // Lightbox Logic
+        document.querySelectorAll('img').forEach(img => {
+            if(img.id === 'lightbox-img' || img.classList.contains('nav-logo')) return;
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                document.getElementById('lightbox-img').src = this.src;
+                document.getElementById('lightbox').style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // prevent scrolling when lightbox is open
+            });
+        });
+        
+        document.getElementById('lightbox').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Scroll Animation Observer
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
                 }
-            });
-        });
-
-        // MÃ JAVASCRIPT CHO PHẦN LIGHTBOX (XEM ẢNH)
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const galleryImages = document.querySelectorAll('.screenshots-grid img');
-        const closeBtn = document.querySelector('.close-button');
-
-        galleryImages.forEach(image => {
-            image.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = image.src;
-            });
-        });
-
-        closeBtn.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
             }
-        });
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
     </script>
-
 </body>
 </html>
