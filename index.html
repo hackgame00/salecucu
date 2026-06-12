@@ -457,21 +457,27 @@
             document.body.style.overflow = 'auto';
         });
 
-        // Scroll Animation Observer
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        // Trigger once on load
-        reveal();
+        // Safe IntersectionObserver for Animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: observer.unobserve(entry.target); // if we only want it to animate once
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => {
+                observer.observe(el);
+            });
+        });
 
         // Mobile Menu Toggle
         const mobileMenu = document.getElementById('mobile-menu');

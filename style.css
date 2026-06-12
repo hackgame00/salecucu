@@ -1194,3 +1194,13 @@ body {
     overflow-x: hidden !important;
     width: 100%;
 }
+
+/* Safe animations for mobile */
+@media (max-width: 768px) {
+    .reveal-left, .reveal-right {
+        transform: translateY(40px) !important;
+    }
+    .reveal-left.active, .reveal-right.active {
+        transform: translateY(0) !important;
+    }
+}
