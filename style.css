@@ -1031,3 +1031,82 @@ a {
     font-weight: 800;
 }
 
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 50px;
+    }
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text p {
+        font-size: 15px;
+    }
+    .section-title h2 {
+        font-size: 28px;
+    }
+    .section-title p {
+        font-size: 15px;
+    }
+    .highlight-card {
+        padding: 20px;
+    }
+    .feature-text h3 {
+        font-size: 26px;
+    }
+    .contact-box {
+        flex-direction: column;
+    }
+    .contact-info, .contact-form {
+        padding: 30px;
+        width: 100%;
+        min-width: auto;
+    }
+    .pricing-card {
+        padding: 30px 20px;
+    }
+    
+    /* Make table responsive by stacking columns */
+    .feature-table thead {
+        display: none;
+    }
+    .feature-table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        padding: 15px;
+    }
+    .feature-category {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,153,0,0.3);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .feature-table td {
+        border-bottom: none;
+        padding: 5px 0;
+    }
+    
+    /* Analytics Grid */
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust buttons on mobile */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
