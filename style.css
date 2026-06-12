@@ -1151,3 +1151,40 @@ a {
 .navbar.glassmorphism {
     overflow: visible !important;
 }
+
+/* Maximize screen width on mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px !important;
+    }
+    .highlight-card {
+        padding: 15px !important;
+    }
+    .tool-content {
+        padding: 15px !important;
+    }
+    .contact-info, .contact-form {
+        padding: 20px 15px !important;
+    }
+    .pricing-card {
+        padding: 20px 15px !important;
+    }
+    .trial-banner {
+        padding: 30px 15px !important;
+    }
+    .feature-table-container {
+        padding: 15px !important;
+    }
+    .testimonial-card {
+        padding: 20px 15px !important;
+    }
+    .faq-question {
+        padding: 15px !important;
+    }
+    .faq-answer {
+        padding: 0 15px !important;
+    }
+    .feature-img {
+        padding: 5px !important;
+    }
+}
