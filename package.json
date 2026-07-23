@@ -1,0 +1,8 @@
+{
+  "name": "salecucu-pos-website",
+  "version": "1.0.0",
+  "description": "Vercel serverless function for sending emails",
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}

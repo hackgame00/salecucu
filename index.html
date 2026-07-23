@@ -42,7 +42,7 @@
                 <li><a href="#tools" class="nav-item">Tiện Ích</a></li>
                 <li><a href="#trial" class="nav-item">Dùng Thử</a></li>
                 <li><a href="#contact" class="nav-item">Liên Hệ</a></li>
-                <li><a href="https://github.com/hackgame00/salecucu-updates/releases/download/bancapnhat/SaleCuCu_POS.zip" class="btn-primary">Tải về ngay</a></li>
+                <li><a href="javascript:void(0)" class="btn-primary" onclick="openDownloadModal('https://github.com/hackgame00/salecucu-updates/releases/download/bancapnhat/SaleCuCu_POS.zip')">Tải về ngay</a></li>
             </ul>
         </div>
     </nav>
@@ -55,7 +55,7 @@
                 <p style="font-size: 16px; color: rgba(255, 255, 255, 0.7); margin-bottom: 40px; margin-top: -20px; font-weight: 300; line-height: 1.5;">Tự hào là chương trình tính tiền của người Việt Nam tại Hungary, SaleCuCu là chương trình bán lẻ kết hợp gửi hóa đơn online NAV hàng đầu. Chúng tôi hỗ trợ xuất hóa đơn giấy lên cơ quan thuế Hungary nhanh chóng và chính xác nhất.</p>
                 <div class="hero-buttons">
                     <a href="#invoices" class="btn-primary">Khám phá tính năng</a>
-                    <a href="https://github.com/hackgame00/salecucu-updates/releases/download/bancapnhat/SaleCuCu_POS.zip" class="btn-secondary">Tải phần mềm về máy</a>
+                    <a href="javascript:void(0)" class="btn-secondary" onclick="openDownloadModal('https://github.com/hackgame00/salecucu-updates/releases/download/bancapnhat/SaleCuCu_POS.zip')">Tải phần mềm về máy</a>
                 </div>
             </div>
             <div class="hero-image glassmorphism reveal-right">
@@ -295,7 +295,7 @@
                     <span><i class='bx bx-check-circle'></i> Không giới hạn sản phẩm</span>
                     <span><i class='bx bx-check-circle'></i> Hỗ trợ kỹ thuật 24/7</span>
                 </div>
-                <a href="https://app.mediafire.com/folder/u0641z474476f" target="_blank" class="btn-primary" style="font-size: 18px; padding: 15px 40px; margin-top: 20px;">Tải Phần Mềm Ngay</a>
+                <a href="javascript:void(0)" class="btn-primary" style="font-size: 18px; padding: 15px 40px; margin-top: 20px;" onclick="openDownloadModal('https://app.mediafire.com/folder/u0641z474476f')">Tải Phần Mềm Ngay</a>
             </div>
         </div>
     </section>
@@ -402,7 +402,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formsubmit.co/ajax/hackgame00@icloud.com" method="POST">
+                    <form id="contactForm" action="/api/send-email" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_subject" value="Yêu cầu tư vấn mới từ SaleCuCu POS">
                         <div class="input-group">
@@ -435,6 +435,31 @@
         </div>
     </footer>
 
+    <!-- Download Modal -->
+    <div id="downloadModal" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; backdrop-filter:blur(5px);">
+        <div class="contact-box glassmorphism" style="max-width: 500px; width: 90%; position: relative; padding: 0; display: block;">
+            <span id="closeDownloadModal" style="position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: var(--text-light); z-index: 10;">&times;</span>
+            <div class="contact-form" style="padding: 40px;">
+                <h2 style="margin-bottom: 10px; text-align: center; font-size: 28px;">Thông Tin <span class="text-gradient">Tải Về</span></h2>
+                <p style="text-align: center; margin-bottom: 25px; color: var(--text-light);">Vui lòng để lại thông tin trước khi tải phần mềm.</p>
+                <form id="downloadForm" action="/api/send-email" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Thông báo: Có người vừa tải SaleCuCu POS">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Họ và tên" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email của bạn">
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Bắt Đầu Tải Về</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox Modal -->
     <div id="lightbox" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(5px);">
         <img id="lightbox-img" src="" style="max-width:95%; max-height:95%; border-radius:12px; box-shadow:0 0 50px rgba(255,153,0,0.3); object-fit:contain; border:1px solid rgba(255,255,255,0.1);">
@@ -456,6 +481,65 @@
             this.style.display = 'none';
             document.body.style.overflow = 'auto';
         });
+
+        // Download Modal Logic
+        let currentDownloadUrl = '';
+        
+        function openDownloadModal(url) {
+            currentDownloadUrl = url;
+            document.getElementById('downloadModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        document.getElementById('closeDownloadModal').addEventListener('click', function() {
+            document.getElementById('downloadModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        document.getElementById('downloadModal').addEventListener('click', function(e) {
+            if(e.target === this) {
+                this.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        const downloadForm = document.getElementById('downloadForm');
+        if (downloadForm) {
+            downloadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = e.target;
+                const btn = form.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = 'Đang xử lý...';
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        document.getElementById('downloadModal').style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        form.reset();
+                        let w = window.open(currentDownloadUrl, '_blank');
+                        if (!w) {
+                            window.location.href = currentDownloadUrl;
+                        }
+                    } else {
+                        alert('Có lỗi xảy ra từ máy chủ gửi mail. Vui lòng thử lại sau.');
+                    }
+                }).catch(error => {
+                    alert('Không thể kết nối. Vui lòng kiểm tra lại mạng và thử lại.');
+                }).finally(() => {
+                    btn.innerText = originalText;
+                });
+            });
+        }
 
         // Safe IntersectionObserver for Animations
         document.addEventListener("DOMContentLoaded", function() {
@@ -520,11 +604,14 @@
                 const btn = form.querySelector('button');
                 const originalText = btn.innerText;
                 btn.innerText = 'Đang gửi...';
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
                 
                 fetch(form.action, {
                     method: 'POST',
-                    body: new FormData(form),
+                    body: JSON.stringify(data),
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     }
                 }).then(response => {
