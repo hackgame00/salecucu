@@ -276,22 +276,7 @@ h1, h2 {
     transition: var(--transition);
 }
 
-.feature-img {
-    position: relative;
-}
 
-.feature-img::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ff5f56;
-    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
-    z-index: 2;
-}
 
 .hero-image:hover {
     transform: translateY(-5px);
