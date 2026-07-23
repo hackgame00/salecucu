@@ -272,13 +272,15 @@ h1, h2 {
 
 .hero-image {
     flex: 1.2;
-    padding: 40px 10px 10px 10px !important;
-    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+    padding: 5px;
     transition: var(--transition);
-    box-shadow: -20px 20px 50px rgba(0,0,0,0.6), 0 0 40px rgba(255, 153, 0, 0.2);
 }
 
-.hero-image::before, .feature-img::before {
+.feature-img {
+    position: relative;
+}
+
+.feature-img::before {
     content: '';
     position: absolute;
     top: 15px;
@@ -292,8 +294,7 @@ h1, h2 {
 }
 
 .hero-image:hover {
-    transform: perspective(1000px) rotateY(-5deg) translateY(-10px) scale(1.02);
-    box-shadow: -10px 30px 60px rgba(0,0,0,0.7), 0 0 60px rgba(255, 153, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 .hero-image img {
